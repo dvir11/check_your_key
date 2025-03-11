@@ -1,0 +1,254 @@
+{
+  "forbiddenVariables": [
+    {
+      "name": "privateKey",
+      "alternatives": [
+        "process.env.PRIVATE_KEY",
+        "os.environ.get('PRIVATE_KEY')"
+      ],
+      "description": "Private key that could expose sensitive information",
+      "severity": "high"
+    },
+    {
+      "name": "secretKey",
+      "alternatives": [
+        "process.env.SECRET_KEY",
+        "os.environ.get('SECRET_KEY')"
+      ],
+      "description": "Secret key that could expose sensitive information",
+      "severity": "high"
+    },
+    {
+      "name": "apiKey",
+      "alternatives": [
+        "process.env.API_KEY",
+        "os.environ.get('API_KEY')"
+      ],
+      "description": "API key that could expose sensitive information",
+      "severity": "high"
+    },
+    {
+      "name": "password",
+      "alternatives": [
+        "process.env.PASSWORD",
+        "os.environ.get('PASSWORD')"
+      ],
+      "description": "Password that could expose sensitive information",
+      "severity": "high"
+    },
+    {
+      "name": "token",
+      "alternatives": [
+        "process.env.TOKEN",
+        "os.environ.get('TOKEN')"
+      ],
+      "description": "Token that could expose sensitive information",
+      "severity": "high"
+    },
+    {
+      "name": "debugMode",
+      "alternatives": [
+        "process.env.DEBUG_MODE === 'true'",
+        "os.environ.get('DEBUG_MODE') == 'True'"
+      ],
+      "description": "Debug mode that could expose sensitive information in production",
+      "severity": "high"
+    },
+    {
+      "name": "myCustomSecret",
+      "alternatives": [
+        "process.env.MY_CUSTOM_SECRET",
+        "os.environ.get('MY_CUSTOM_SECRET')"
+      ],
+      "description": "Custom variable that contains sensitive information",
+      "severity": "high"
+    },
+    {
+      "name": "testSecret",
+      "alternatives": [
+        "process.env.TEST_SECRET",
+        "os.environ.get('TEST_SECRET')"
+      ],
+      "description": "Test secret variable for demonstration",
+      "severity": "high"
+    },
+    {
+      "name": "myApiToken",
+      "alternatives": [
+        "process.env.API_TOKEN",
+        "os.environ.get('API_TOKEN')"
+      ],
+      "description": "API token for service",
+      "severity": "high"
+    },
+    {
+      "name": "mykey",
+      "alternatives": [
+        "process.env.MY_KEY",
+        "os.environ.get('MY_KEY')"
+      ],
+      "description": "API token for service",
+      "severity": "high"
+    },
+    {
+      "name": "SECRET_KEY",
+      "alternatives": [
+        "os.environ.get('DJANGO_SECRET_KEY')"
+      ],
+      "description": "Django secret key that should not be in source code",
+      "severity": "high"
+    },
+    {
+      "name": "DEBUG",
+      "alternatives": [
+        "os.environ.get('DEBUG', 'False') == 'True'"
+      ],
+      "description": "Debug flag that should be disabled in production",
+      "severity": "medium"
+    },
+    {
+      "name": "EMAIL_HOST_PASSWORD",
+      "alternatives": [
+        "os.environ.get('EMAIL_PASSWORD')"
+      ],
+      "description": "Email password that should not be in source code",
+      "severity": "high"
+    },
+    {
+      "name": "AWS_ACCESS_KEY_ID",
+      "alternatives": [
+        "os.environ.get('AWS_ACCESS_KEY_ID')"
+      ],
+      "description": "AWS access key that should not be in source code",
+      "severity": "high"
+    },
+    {
+      "name": "AWS_SECRET_ACCESS_KEY",
+      "alternatives": [
+        "os.environ.get('AWS_SECRET_ACCESS_KEY')"
+      ],
+      "description": "AWS secret key that should not be in source code",
+      "severity": "high"
+    },
+    {
+      "name": "STRIPE_API_KEY",
+      "alternatives": [
+        "os.environ.get('STRIPE_API_KEY')"
+      ],
+      "description": "Stripe API key that should not be in source code",
+      "severity": "high"
+    },
+    {
+      "name": "GOOGLE_MAPS_API_KEY",
+      "alternatives": [
+        "os.environ.get('GOOGLE_MAPS_API_KEY')"
+      ],
+      "description": "Google Maps API key that should not be in source code",
+      "severity": "high"
+    },
+    {
+      "name": "JWT_SECRET_KEY",
+      "alternatives": [
+        "os.environ.get('JWT_SECRET_KEY')"
+      ],
+      "description": "JWT secret key that should not be in source code",
+      "severity": "high"
+    },
+    {
+      "name": "JWT_PRIVATE_KEY",
+      "alternatives": [
+        "os.environ.get('JWT_PRIVATE_KEY')"
+      ],
+      "description": "JWT private key that should not be in source code",
+      "severity": "high"
+    },
+    {
+      "name": "newPythonSecret",
+      "alternatives": [
+        "os.environ.get('NEW_PYTHON_SECRET')"
+      ],
+      "description": "Python secret variable for testing",
+      "severity": "high"
+    },
+    {
+      "name": "anotherSecret",
+      "alternatives": [
+        "process.env.ANOTHER_SECRET",
+        "os.environ.get('ANOTHER_SECRET')"
+      ],
+      "description": "Another secret variable for testing",
+      "severity": "high"
+    },
+    {
+      "name": "thirdSecret",
+      "alternatives": [
+        "process.env.THIRD_SECRET",
+        "os.environ.get('THIRD_SECRET')"
+      ],
+      "description": "Third secret variable for testing",
+      "severity": "high"
+    },
+    {
+      "name": "fourthSecret",
+      "alternatives": [
+        "process.env.FOURTH_SECRET",
+        "os.environ.get('FOURTH_SECRET')"
+      ],
+      "description": "Fourth secret variable for testing",
+      "severity": "high"
+    },
+    {
+      "name": "fifthSecret",
+      "alternatives": [
+        "process.env.FIFTH_SECRET",
+        "os.environ.get('FIFTH_SECRET')"
+      ],
+      "description": "Fifth secret variable for testing",
+      "severity": "high"
+    },
+    {
+      "name": "testVariable",
+      "alternatives": [
+        "process.env.TEST_VARIABLE",
+        "os.environ.get('TEST_VARIABLE')"
+      ],
+      "description": "Test variable for checking syntax fix",
+      "severity": "high"
+    }
+  ],
+  "excludedDirectories": [
+    "node_modules",
+    "dist",
+    "build",
+    ".git",
+    "venv",
+    "__pycache__",
+    ".pytest_cache"
+  ],
+  "excludedFiles": [
+    "security-config.json"
+  ],
+  "fileExtensions": [
+    ".js",
+    ".jsx",
+    ".ts",
+    ".tsx",
+    ".py"
+  ],
+  "alerts": {
+    "enabled": true,
+    "showAlternatives": true,
+    "showDescription": true,
+    "severity": "high"
+  },
+  "languagePatterns": {
+    "javascript": {
+      "envVarPattern": "process.env.{VAR_NAME}",
+      "importPattern": "require('dotenv').config();"
+    },
+    "python": {
+      "envVarPattern": "os.environ.get('{VAR_NAME}')",
+      "importPattern": "import os"
+    }
+  }
+}

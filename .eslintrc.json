@@ -1,0 +1,47 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "no-unused-vars": "off",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "Property[key.name=\"secretKey\"]",
+        "message": "🔴 שגיאה חמורה: אסור להשתמש במפתח 'secretKey'!"
+      },
+      {
+        "selector": "Property[key.name=\"debugMode\"]",
+        "message": "🔴 שגיאה חמורה: אסור להשתמש במפתח 'debugMode'!"
+      },
+      {
+        "selector": "MemberExpression[property.name=\"debugMode\"]",
+        "message": "🔴 שגיאה חמורה: אסור להשתמש בתכונה 'debugMode'!"
+      },
+      {
+        "selector": "VariableDeclarator[id.name=\"debugMode\"]",
+        "message": "🔴 שגיאה חמורה: אסור להגדיר משתנה בשם 'debugMode'!"
+      },
+      {
+        "selector": "VariableDeclarator[id.name=\"secretKey\"]",
+        "message": "🔴 שגיאה חמורה: אסור להגדיר משתנה בשם 'secretKey'!"
+      }
+    ],
+    "no-restricted-properties": [
+      "error",
+      {
+        "object": "config",
+        "property": "debugMode",
+        "message": "🔴 שגיאה חמורה: אסור להשתמש ב-config.debugMode!"
+      }
+    ]
+  }
+}

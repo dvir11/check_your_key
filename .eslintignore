@@ -1,0 +1,8 @@
+node_modules/
+dist/
+build/
+coverage/
+.vscode/
+.git/
+*.config.js
+!.eslintrc.js 
